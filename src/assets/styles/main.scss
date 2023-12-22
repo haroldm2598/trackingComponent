@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+$primary: hsl(0, 100%, 68%);
+$neutral--100: hsl(230, 29%, 20%);
+$neutral--200: hsl(230, 11%, 40%);
+$neutral--300: hsl(231, 7%, 65%);
+$neutral--400: hsl(207, 33%, 95%);
+
+// FONT FAMILY fontsize 18px
+// Headings, Call-to-actions, Navigation
+// 400, 700
+$barlowCondensed: 'Barlow Condensed', sans-serif;
+// Body
+// 400
+$barlow: 'Barlow', sans-serif;
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	font-family: $barlow;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.headingFont,
+.navbarFont,
+.ctaFont {
+	font-family: $barlowCondensed;
+}
+
+.redBtn {
+	background-color: $primary;
+	border-color: $primary;
+	color: $neutral--400;
+	transition: all 300ms ease-in-out;
+
+	&:hover {
+		background-color: $primary;
+		border-color: $primary;
+		opacity: 0.6;
+	}
+}
+
+.navbarItems {
+	display: inline-block;
+	cursor: pointer;
+
+	&::after {
+		content: '';
+		width: 0px;
+		height: 1px;
+		display: block;
+		background: black;
+		transition: 500ms;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+.backgroundShape {
+	background-color: $neutral--400;
+	border-radius: 0px 0px 0px 81px;
+	-webkit-border-radius: 0px 0px 0px 81px;
+	-moz-border-radius: 0px 0px 0px 81px;
+	height: 100%;
+	width: 100%;
+}
